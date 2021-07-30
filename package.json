@@ -1,0 +1,22 @@
+{
+  "name": "foundryvtt-actor-viewer",
+  "version": "1.0.0",
+  "description": "Provides a way for FoundryVTT users to upload exported FoundryVTT-based character sheets for the purposes of printing and viewing outside of the FoundryVTT application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsimnujhawj/foundryvtt-actor-viewer.git"
+  },
+  "author": "Tsimnuj Hawj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsimnujhawj/foundryvtt-actor-viewer/issues"
+  },
+  "homepage": "https://github.com/tsimnujhawj/foundryvtt-actor-viewer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

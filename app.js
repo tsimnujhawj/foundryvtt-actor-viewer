@@ -4,4 +4,4 @@ const characterFile = file.readFileSync('./data/pcs/elrosro.json', "utf-8", (err
     return data
 })
 const character = JSON.parse(characterFile)
-console.log(character.data.abilities)
+console.log(character.name)
