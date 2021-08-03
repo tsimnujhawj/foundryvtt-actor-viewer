@@ -45,6 +45,7 @@ module.exports = function(app) {
               { name: "Stealth", attr: "Dex"},
               { name: "Survival", attr: "Wis"},
             ]
+            currency = ["cp", "sp", "ep", "gp", "pp"]
             characterObj = {
               name: character.name
 
