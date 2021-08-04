@@ -47,13 +47,41 @@ module.exports = function(app) {
             ]
             currency = ["cp", "sp", "ep", "gp", "pp"]
             characterObj = {
-              name: character.name
-
+              name: character.name,
+              classes: getClasses(character),
+              subclasses: getSubClasses(character),
             }
-            res.render('character', { title: 'Testing!', message: 'Hey there!', character: character, abilities: abilities });
+            res.render('character', {
+              title: 'Testing!',
+              message: 'Hey there!',
+              character: character,
+              characterObj: characterObj,
+              abilities: abilities,
+              currency: currency
+            });
           })
         }
 
     });
   });
+
+  function getClasses(character){
+    let charClass = [];
+    character.items.forEach(item=>{
+      if (item.type === "class") {
+        charClass.push(item.name)
+      }
+    })
+    return charClass.join(', ');
+  }
+
+  function getSubClasses(character){
+    let charSubClass = [];
+    character.items.forEach(item=>{
+      if (item.type === "class") {
+        charSubClass.push(item.data.subclass)
+      }
+    })
+    return charSubClass.join(', ');
+  }
 };

@@ -344,7 +344,7 @@ form.charsheet main > section div.passive-perception input {
 }
 
 form.charsheet main > section div.otherprofs textarea {
-	height: 26em;
+	height: 20em;
 }
 
 form.charsheet main section.combat {

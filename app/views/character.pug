@@ -12,7 +12,7 @@ html
           ul
             li
               label(for="classlevel") Class & Level
-              input(name="classlevel" placeholder="Paladin 2")
+              input(name="classlevel" placeholder=characterObj.classes value=`${characterObj.classes} / ${characterObj.subclasses}`)
             li
               label(for="background") Background
               input(name="background" placeholder="Acolyte")
