@@ -7,40 +7,40 @@ html
       header
         section(class='charname')
           label(for="charname") Character Name
-          input(name="charname" placeholder=character.name)
+          input(name="charname" value=character.name)
         section(class='misc')
           ul
             li
               label(for="classlevel") Class & Level
-              input(name="classlevel" placeholder=characterObj.classes value=`${characterObj.classes} / ${characterObj.subclasses}`)
+              input(name="classlevel" value=`${characterObj.classes} / ${characterObj.subclasses}`)
             li
               label(for="background") Background
-              input(name="background" placeholder="Acolyte")
+              input(name="background" value=character.data.details.background)
             li
               label(for="playername") Player Name
-              input(name="playername" placeholder="Player McPlayerface")
+              input(name="playername")
             li
               label(for="race") Race
-              input(name="race" placeholder="Half-elf")
+              input(name="race" value=character.data.details.race)
             li
               label(for="alignment") Alignment
-              input(name="alignment" placeholder="Lawful Good")
+              input(name="alignment")
             li
               label(for="experiencepoints") Experience Points
-              input(name="experiencepoints" placeholder="3240")
+              input(name="experiencepoints")
       
       main
         section
           section(class='attributes')
             div(class='scores')
               ul
-                each attr in [ "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" ]
+                each attr in [ {name: "Strength", code: "str"}, {name: "Dexterity", code: "dex"}, {name: "Constitution", code: "con"}, {name: "Wisdom", code: "wis"}, {name: "Intelligence", code: "int"}, {name: "Charisma", code: "cha"} ]
                   li
                     div(class='score')
-                      label(for="#{attr}score") #{attr}
-                      input(name="#{attr}score" placeholder="10")
+                      label(for="#{attr.name}score") #{attr.name}
+                      input(name="#{attr.name}score" value=character.data.abilities[attr.code].value)
                     div(class='modifier')
-                      input(name="#{attr}mod" placeholder="+0")
+                      input(name="#{attr.name}mod" value=character.data.abilities[attr.code].mod)
                 
             div(class='attr-applications')
               div(class='inspiration box')
