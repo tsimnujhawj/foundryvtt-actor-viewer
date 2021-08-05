@@ -12,7 +12,8 @@ html
           ul
             li
               label(for="classlevel") Class & Level
-              input(name="classlevel" value=`${characterObj.classes} / ${characterObj.subclasses}`)
+              for i in characterObj.classCount
+                input(name="classlevel" value=`${characterObj.classes[i].subclass} | Lv. ${characterObj.classes[i].level}`)
             li
               label(for="background") Background
               input(name="background" value=character.data.details.background)
@@ -145,14 +146,14 @@ html
                     th Atk Bonus
                     th Damage/Type
                 tbody
-                  for i in [1,2,3]
+                  for i in characterObj.weaponCount
                     tr
                       td
-                        input(type="text" name="atkname#{i}")
+                        input(type="text" name="atkname#{i}" value=characterObj.weapons[i].name)
                       td
-                        input(type="text" name="atkbonus#{i}")
+                        input(type="text" name="atkbonus#{i}" value=characterObj.weapons[i].data.damage.parts[0][0])
                       td
-                        input(type="text" name="atkdamage#{i}")
+                        input(type="text" name="atkdamage#{i}" value=characterObj.weapons[i].data.damage.parts[0][1])
               textarea(class='textarea-mod')
           section(class='equipment')
             div
@@ -162,26 +163,26 @@ html
                   for moneyType in currency
                     li
                       label(for=moneyType) #{moneyType}
-                      input(type="text" name=moneyType)
+                      input(type="text" name=moneyType value=character.data.currency[moneyType])
               textarea(placeholder="Equipment list here" class='textarea-mod')
 
         section
           section(class='flavor')
             div(class='personality')
               label(for="personality") Personality
-              textarea(class='textarea-mod' name="personality")
+              textarea(class='textarea-mod' name="personality") #{character.data.details.trait}
               
             div(class='ideals')
               label(for="ideals") Ideals
-              textarea(class='textarea-mod' name="ideals")
+              textarea(class='textarea-mod' name="ideals") #{character.data.details.ideal}
               
             div(class='bonds')
               label(for="bonds") Bonds
-              textarea(class='textarea-mod' name="bonds")
+              textarea(class='textarea-mod' name="bonds") #{character.data.details.bond}
               
             div(class='flaws')
               label(for="flaws") Flaws
-              textarea(class='textarea-mod' name="flaws")
+              textarea(class='textarea-mod' name="flaws") #{character.data.details.flaw}
               
           section(class='features')
             div

@@ -2,6 +2,29 @@ const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const path = require('path');
 
+const abilities =  [
+  { name: "Acrobatics", attr: "Dex"},
+  { name: "Animal Handling", attr: "Wis"},
+  { name: "Arcana", attr: "Int"},
+  { name: "Athletics", attr: "Str"},
+  { name: "Deception", attr: "Cha"},
+  { name: "History", attr: "Int"},
+  { name: "Insight", attr: "Wis"},
+  { name: "Intimidation", attr: "Cha"},
+  { name: "Investigation", attr: "Int"},
+  { name: "Medicine", attr: "Wis"},
+  { name: "Nature", attr: "Int"},
+  { name: "Perception", attr: "Wis"},
+  { name: "Performance", attr: "Cha"},
+  { name: "Persuasion", attr: "Cha"},
+  { name: "Religion", attr: "Int"},
+  { name: "Sleight of Hand", attr: "Dex"},
+  { name: "Stealth", attr: "Dex"},
+  { name: "Survival", attr: "Wis"},
+]
+
+const currency = ["cp", "sp", "ep", "gp", "pp"]
+
 module.exports = function(app) {
     // default options
     app.use(fileUpload());
@@ -24,32 +47,13 @@ module.exports = function(app) {
           return res.status(500).send(err);
         } else {
           fs.readFile(uploadPath, 'utf8', (err, data) => {
-            character = JSON.parse(data)
-            abilities = [
-              { name: "Acrobatics", attr: "Dex"},
-              { name: "Animal Handling", attr: "Wis"},
-              { name: "Arcana", attr: "Int"},
-              { name: "Athletics", attr: "Str"},
-              { name: "Deception", attr: "Cha"},
-              { name: "History", attr: "Int"},
-              { name: "Insight", attr: "Wis"},
-              { name: "Intimidation", attr: "Cha"},
-              { name: "Investigation", attr: "Int"},
-              { name: "Medicine", attr: "Wis"},
-              { name: "Nature", attr: "Int"},
-              { name: "Perception", attr: "Wis"},
-              { name: "Performance", attr: "Cha"},
-              { name: "Persuasion", attr: "Cha"},
-              { name: "Religion", attr: "Int"},
-              { name: "Sleight of Hand", attr: "Dex"},
-              { name: "Stealth", attr: "Dex"},
-              { name: "Survival", attr: "Wis"},
-            ]
-            currency = ["cp", "sp", "ep", "gp", "pp"]
-            characterObj = {
+            const character = JSON.parse(data)
+            const characterObj = {
               name: character.name,
-              classes: getClasses(character),
-              subclasses: getSubClasses(character),
+              classes: getClasses(character.items),
+              weapons: getWeapons(character.items),
+              weaponCount: getCount(getWeapons(character.items)),
+              classCount: getCount(getClasses(character.items))
             }
             res.render('character', {
               title: 'Testing!',
@@ -65,19 +69,41 @@ module.exports = function(app) {
     });
   });
 
-  function getClasses(character){
-    let charClass = [];
-    character.items.forEach(item=>{
-      if (item.type === "class") {
-        charClass.push(item.name)
-      }
-    })
-    return charClass.join(', ');
+  function getCount(list){
+    let count = [];
+    for (let i = 0; i < list.length; i++) {
+      count.push(i)
+    }
+    return count;
   }
 
-  function getSubClasses(character){
+  function getWeapons(itemList){
+    let weapons = [];
+    itemList.forEach(item=>{
+      if (item.type === "weapon") {
+        weapons.push(item)
+      }
+    })
+    return weapons;
+  }
+
+  function getClasses(itemList){
+    let charClass = [];
+    itemList.forEach(item=>{
+      if (item.type === "class") {
+        charClass.push({
+          name: item.name,
+          subclass: item.data.subclass,
+          level: item.data.levels
+        })
+      }
+    })
+    return charClass;
+  }
+
+  function getSubClasses(itemList){
     let charSubClass = [];
-    character.items.forEach(item=>{
+    itemList.forEach(item=>{
       if (item.type === "class") {
         charSubClass.push(item.data.subclass)
       }
