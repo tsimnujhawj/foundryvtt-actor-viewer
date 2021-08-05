@@ -52,7 +52,7 @@ html
               div(class='proficiencybonus box')
                 div(class='label-container')
                   label(for="proficiencybonus") Proficiency Bonus
-                input(name="proficiencybonus" placeholder="+2")
+                input(name="proficiencybonus" value=character.data.attributes.prof)
                 
               div(class='saves list-section box')
                 ul
@@ -87,38 +87,40 @@ html
             div(class='armorclass')
               div
                 label(for="ac") Armor Class
-                input(type="text" name="ac" placeholder="10")
+                input(type="text" name="ac" value=character.data.attributes.ac.flat)
 
             div(class='initiative')
               div
                 label(for="initiative") Initiative
-                input(type="text" name="initiative" placeholder="+0")
+                input(type="text" name="initiative" value=character.data.attributes.init.total)
 
             div(class='speed')
               div
                 label(for="speed") Speed
-                input(type="text" name="speed" placeholder="30")
+                input(type="text" name="speed" value=`${character.data.attributes.movement.walk}${value=character.data.attributes.movement.units}`)
 
             div(class='hp')
               div(class='regular')
                 div(class='max')
                   label(for="maxhp") Hit Point Maximum
-                  input(type="text" name="maxhp" placeholder="10")
+                  input(type="text" name="maxhp" value=value=character.data.attributes.hp.max)
                 div(class='current')
                   label(for="currenthp") Current Hit Points
-                  input(type="text" name="currenthp")
+                  input(type="text" name="currenthp" value=character.data.attributes.hp.value)
               div(class='temporary')
                 label(for="temphp") Temporary Hit Points
-                input(type="text" name="temphp")
+                input(type="text" name="temphp" value=character.data.attributes.hp.temp)
 
             div(class='hitdice')
               div
                 div(class='total')
                   label(for="totalhd") Total
-                  input(type="text" name="totalhd" placeholder="2d10")
+                  for i in characterObj.classCount
+                    input(type="text" name="totalhd" value=`${characterObj.classes[i].level}${characterObj.classes[i].hitDice}`)
                 div(class='remaining')
                   label(for="remaininghd") Hit Dice
-                  input(type="text" name="remaininghd")
+                  for i in characterObj.classCount
+                    input(type="text" name="remaininghd")
 
             div(class='deathsaves')
               div
@@ -187,4 +189,4 @@ html
           section(class='features')
             div
               label(for="features") Features & Traits
-              textarea(class='textarea-mod' name="features")
+              textarea(class='textarea-mod' name="features") #{characterObj.features.map(x=>[`+==========================+\n${x.name}`, x.description].join('\n----------------------------\n').concat('\n+==========================+\n\n')).join('')}

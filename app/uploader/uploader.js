@@ -52,12 +52,13 @@ module.exports = function(app) {
               name: character.name,
               classes: getClasses(character.items),
               weapons: getWeapons(character.items),
+              features: getFeatures(character.items),
               weaponCount: getCount(getWeapons(character.items)),
-              classCount: getCount(getClasses(character.items))
+              classCount: getCount(getClasses(character.items)),
+              featureCount: getCount(getFeatures(character.items))
             }
             res.render('character', {
-              title: 'Testing!',
-              message: 'Hey there!',
+              title: character.name,
               character: character,
               characterObj: characterObj,
               abilities: abilities,
@@ -87,6 +88,19 @@ module.exports = function(app) {
     return weapons;
   }
 
+  function getFeatures(itemList){
+    let features = [];
+    itemList.forEach(item=>{
+      if (item.type === "feat") {
+        features.push({
+          name: item.name.replace(',', ''),
+          description: stripHtml(item.data.description.value)
+        })
+      }
+    })
+    return features;
+  }
+
   function getClasses(itemList){
     let charClass = [];
     itemList.forEach(item=>{
@@ -94,20 +108,15 @@ module.exports = function(app) {
         charClass.push({
           name: item.name,
           subclass: item.data.subclass,
-          level: item.data.levels
+          level: item.data.levels,
+          hitDice: item.data.hitDice
         })
       }
     })
     return charClass;
   }
 
-  function getSubClasses(itemList){
-    let charSubClass = [];
-    itemList.forEach(item=>{
-      if (item.type === "class") {
-        charSubClass.push(item.data.subclass)
-      }
-    })
-    return charSubClass.join(', ');
+  function stripHtml(string){
+    return string.replace(/(<([^>]+)>)/gi, "")
   }
 };
