@@ -13,7 +13,7 @@ html
             li
               label(for="classlevel") Class & Level
               for i in characterObj.classCount
-                input(name="classlevel" value=`${characterObj.classes[i].name} ${characterObj.classes[i].subclass} | Lv. ${characterObj.classes[i].level}`)
+                input(name="classlevel" value=`${characterObj.classes[i].name} ${characterObj.classes[i].subclass} | Lv. ${characterObj.classes[i].level} (${characterObj.totalLevel})`)
             li
               label(for="background") Background
               input(name="background" value=character.data.details.background)
@@ -35,13 +35,19 @@ html
           section(class='attributes')
             div(class='scores')
               ul
-                each attr in [ {name: "Strength", code: "str"}, {name: "Dexterity", code: "dex"}, {name: "Constitution", code: "con"}, {name: "Wisdom", code: "wis"}, {name: "Intelligence", code: "int"}, {name: "Charisma", code: "cha"} ]
+                each attr in abilities
+                  - let mod = 0
+                  - abilityScoreModifiers.filter(obj=>{
+                  - if (obj.score === character.data.abilities[attr.attr].value) {
+                  -    mod = obj.mod
+                  -  }
+                  - })
                   li
                     div(class='score')
                       label(for="#{attr.name}score") #{attr.name}
-                      input(name="#{attr.name}score" value=character.data.abilities[attr.code].value)
+                      input(name="#{attr.name}score" value=character.data.abilities[attr.attr].value)
                     div(class='modifier')
-                      input(name="#{attr.name}mod" value=character.data.abilities[attr.code].mod)
+                      input(name="#{attr.name}mod" value=mod)
                 
             div(class='attr-applications')
               div(class='inspiration box')
@@ -52,14 +58,27 @@ html
               div(class='proficiencybonus box')
                 div(class='label-container')
                   label(for="proficiencybonus") Proficiency Bonus
-                input(name="proficiencybonus" value=character.data.attributes.prof)
+                input(name="proficiencybonus" value=`+${proficiencyBonus[characterObj.totalLevel].bonus}`)
                 
               div(class='saves list-section box')
                 ul
                   for attr in abilities
+                    - let mod = 0
+                    - abilityScoreModifiers.filter(obj=>{
+                    - if (obj.score === character.data.abilities[attr.attr].value) {
+                    -    if (character.data.abilities[attr.attr].proficient === 1) {
+                    -       mod = parseFloat(obj.mod)+proficiencyBonus[characterObj.totalLevel].bonus
+                    -         if (mod >= 0) {
+                    -             mod = `+${mod}`
+                    -         }
+                    -    } else {
+                    -       mod = obj.mod
+                    -    }
+                    -  }
+                    - })
                     li
                       label(for="#{attr.name}-save") #{attr.name}
-                      input(name="#{attr.name}-save" type="text" value=character.data.abilities[attr.attr].save)
+                      input(name="#{attr.name}-save" type="text" value=mod)
                       if character.data.abilities[attr.attr].proficient === 1
                         input(name="#{attr.name}-save-prof" type="checkbox" checked)
                       else 
@@ -82,7 +101,7 @@ html
           div(class='passive-perception box')
             div(class='label-container')
               label(for="passiveperception") Passive Wisdom (Perception)
-            input(name="passiveperception" value=character.data.skills.per.passive)
+            input(name="passiveperception" value=characterObj.passivePerception)
             
           div(class='otherprofs box textblock')
             label(for="otherprofs") Other Proficiencies and Languages
@@ -93,12 +112,12 @@ html
             div(class='armorclass')
               div
                 label(for="ac") Armor Class
-                input(type="text" name="ac" value=character.data.attributes.ac.flat)
+                input(type="text" name="ac" value=characterObj.armorClass)
 
             div(class='initiative')
               div
                 label(for="initiative") Initiative
-                input(type="text" name="initiative" value=character.data.attributes.init.total)
+                input(type="text" name="initiative" value=`${characterObj.initiative}`)
 
             div(class='speed')
               div

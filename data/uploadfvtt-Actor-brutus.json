@@ -1,0 +1,945 @@
+{
+  "name": "Brutus",
+  "type": "character",
+  "img": "worlds/new-world/data/d6n6nlt-ce8e2d8e-26a2-46f1-9331-82d01d3f3d88.jpg",
+  "data": {
+    "abilities": {
+      "str": {
+        "value": 18,
+        "proficient": 1
+      },
+      "dex": {
+        "value": 9,
+        "proficient": 0
+      },
+      "con": {
+        "value": 15,
+        "proficient": 1
+      },
+      "int": {
+        "value": 8,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 6,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": null,
+        "calc": "unarmoredBarb",
+        "formula": ""
+      },
+      "hp": {
+        "value": 14,
+        "min": 0,
+        "max": 14,
+        "temp": null,
+        "tempmax": null
+      },
+      "init": {
+        "value": 0,
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "int",
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "exhaustion": 0,
+      "inspiration": false
+    },
+    "details": {
+      "biography": {
+        "value": "",
+        "public": ""
+      },
+      "alignment": "",
+      "race": "Half-Orc",
+      "background": "Soldier",
+      "originalClass": "YUYtrex3RO2Nquis",
+      "xp": {
+        "value": 0,
+        "min": 0,
+        "max": 300
+      },
+      "appearance": "",
+      "trait": "Angry at the world.",
+      "ideal": "Kill things. Eat. Drink.",
+      "bond": "Love drinks.",
+      "flaw": "Quick to anger."
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": ""
+      },
+      "weaponProf": {
+        "value": [],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 25,
+      "ep": 0,
+      "sp": 50,
+      "cp": 120
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "ani": {
+        "value": 1,
+        "ability": "wis"
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int"
+      },
+      "ath": {
+        "value": 1,
+        "ability": "str"
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "his": {
+        "value": 0,
+        "ability": "int"
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "itm": {
+        "value": 1,
+        "ability": "cha"
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int"
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis"
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int"
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis"
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha"
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int"
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis"
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "secondary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "tertiary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      }
+    }
+  },
+  "token": {
+    "name": "Gimli",
+    "img": "worlds/new-world/data/d6n6nlt-ce8e2d8e-26a2-46f1-9331-82d01d3f3d88.jpg",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "mirrorX": false,
+    "mirrorY": false,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "vision": true,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 0,
+    "lightAngle": 0,
+    "lightAlpha": 0.25,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "_id": "YUYtrex3RO2Nquis",
+      "name": "Barbarian",
+      "type": "class",
+      "img": "systems/dnd5e/icons/skills/weapon_01.jpg",
+      "data": {
+        "description": {
+          "value": "<p>As a barbarian, you gain the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong> 1d12 per barbarian level<br /><strong>Hit Points at 1st Level:</strong> 12 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d12 (or 7) + your Constitution modifier per barbarian level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong> Light armor, medium armor, shields<br /><strong>Weapons:</strong> Simple weapons, martial weapons<br /><strong>Tools:</strong> None<br /><strong>Saving Throws:</strong> Strength, Constitution<br /><strong>Skills:</strong> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a greataxe or (b) any martial melee weapon</li>\n<li>(a) two handaxes or (b) any simple weapon</li>\n<li>An explorer’s pack and four javelins</li>\n</ul>\n<h1>Barbarian Advancement</h1>\n<table border=\"0\">\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Features</td>\n<td>Rages</td>\n<td>Rage Damage</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.VoR0SUrNX5EJVPIO]{Rage}, @Compendium[dnd5e.classfeatures.SZbsNbaxFFGwBpNK]{Unarmored Defense}</td>\n<td>2</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.SCVjqRdlZ9cvHVSR]{Reckless Attack}, @Compendium[dnd5e.classfeatures.vt31lWAULygEl7yk]{Danger Sense}</td>\n<td>2</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.TH1QAf6YNGSeBVjT]{Primal Path}</td>\n<td>3</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>3</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>@Compendium[dnd5e.classfeatures.XogoBnFWmCAHXppo]{Extra Attack}, @Compendium[dnd5e.classfeatures.Kl6zifJ5OmdHlOi2]{Fast Movement}</td>\n<td>3</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>Path feature</td>\n<td>4</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>@Compendium[dnd5e.classfeatures.NlXslw4yAqmKZWtN]{Feral Instinct}</td>\n<td>4</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>4</td>\n<td>+2</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.L94gyvNpUhUe0rwh]{Brutal Critical (1 die)}</td>\n<td>4</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>Path feature</td>\n<td>4</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.FqfmbPgxiyrWzhYk]{Relentless Rage}</td>\n<td>4</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>5</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.L94gyvNpUhUe0rwh]{Brutal Critical (2 dice)}</td>\n<td>5</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>Path feature</td>\n<td>5</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.l8tUhZ5Pecm9wz7I]{Persistent Rage}</td>\n<td>5</td>\n<td>+3</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>5</td>\n<td>+4</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.L94gyvNpUhUe0rwh]{Brutal Critical (3 dice)}</td>\n<td>6</td>\n<td>+4</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.Q1exex5ALteprrPo]{Indomitable Might}</td>\n<td>6</td>\n<td>+4</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>6</td>\n<td>+4</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.jVU4AgqfrFaqgXns]{Primal Champion}</td>\n<td>Unlimited</td>\n<td>+4</td>\n</tr>\n</tbody>\n</table>\n<h1>Primal Paths</h1>\n<h2>Path of the Berserker</h2>\n<p>For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being.</p>\n<h3>Path of the Berserker Features</h3>\n<p>3rd Level: @Compendium[dnd5e.classfeatures.CkbbAckeCtyHXEnL]{Frenzy}</p>\n<p>6th Level: @Compendium[dnd5e.classfeatures.0Jgf8fYY2ExwgQpN]{Mindless Rage}</p>\n<p>10th Level: @Compendium[dnd5e.classfeatures.M6VSMzVtKPhh8B0i]{Intimidating Presence}</p>\n<p>14th Level: @Compendium[dnd5e.classfeatures.xzD9zlRP6dUxCtCl]{Retaliation}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "levels": 1,
+        "subclass": "",
+        "hitDice": "d12",
+        "hitDiceUsed": 0,
+        "saves": [
+          "str",
+          "con"
+        ],
+        "skills": {
+          "number": 2,
+          "choices": [
+            "ani",
+            "ath",
+            "itm",
+            "nat",
+            "prc",
+            "sur"
+          ],
+          "value": []
+        },
+        "spellcasting": {
+          "progression": "none",
+          "ability": ""
+        },
+        "damage": {
+          "parts": []
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.classes.pvEzGSv71zBhaolc"
+        }
+      }
+    },
+    {
+      "_id": "Rx2RA373xr1QJ55b",
+      "name": "Rage",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/red_10.jpg",
+      "data": {
+        "description": {
+          "value": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p>\n<ul>\n<li>\n<p>You have advantage on Strength checks and Strength saving throws.</p>\n</li>\n<li>\n<p>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</p>\n</li>\n<li>\n<p>You have resistance to bludgeoning, piercing, and slashing damage.</p>\n</li>\n</ul>\n<p>If you are able to cast spells, you can't cast them or concentrate on them while raging. </p>\n<p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. </p>\n<p>Once you have raged the number of times shown for your barbarian level in the Rages column in the table below, you must finish a long rest before you can rage again.</p>\n<p><em style=\"box-sizing:border-box;user-select:text;color:#191813;font-size:13px\">**Foundry note: Note the limited uses is set to the base default of 2. Please manually adjust as required.</em></p>\n<table style=\"width:286px;height:170px\" border=\"1\">\n<tbody>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\"><strong>Barbarian Level</strong></td>\n<td style=\"width:68px;height:17px\"><strong>Rages</strong></td>\n<td style=\"width:96px;height:17px\"><strong>Rage Damage</strong></td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">1st</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">2nd</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">3rd</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">4th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">5th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">6th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">7th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">8th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">9th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">10th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">11th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">12th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">13th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">14th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">15th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">16th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">17th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">18th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">19th</td>\n<td style=\"width:68px;height:17px\">6</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">20th</td>\n<td style=\"width:68px;height:17px\">Unlimited</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n</tbody>\n</table>\n<p> </p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 48",
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": "self"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": 2,
+          "max": "@classes.barbarian.levels > 19 ? 99 : @classes.barbarian.levels > 16 ? 6 : @classes.barbarian.levels > 11 ? 5 : @classes.barbarian.levels > 5 ? 4 : @classes.barbarian.levels > 2 ? 3 : 2",
+          "per": "lr",
+          "type": "lr"
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Barbarian 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": {
+          "amm": false,
+          "fin": false,
+          "fir": false,
+          "foc": false,
+          "hvy": false,
+          "lgt": false,
+          "lod": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "spc": false,
+          "thr": false,
+          "two": false,
+          "ver": false
+        }
+      },
+      "effects": [
+        {
+          "_id": "eWhL8hUr0c2ujDUm",
+          "flags": {},
+          "changes": [
+            {
+              "key": "data.bonuses.mwak.damage",
+              "mode": 2,
+              "value": "+2"
+            },
+            {
+              "key": "data.traits.dr.value",
+              "mode": 2,
+              "value": "slashing"
+            },
+            {
+              "key": "data.traits.dr.value",
+              "mode": 2,
+              "value": "piercing"
+            },
+            {
+              "key": "data.traits.dr.value",
+              "mode": 2,
+              "value": "bludgeoning"
+            }
+          ],
+          "disabled": true,
+          "duration": {
+            "startTime": 1620159597128,
+            "rounds": 10
+          },
+          "icon": "systems/dnd5e/icons/skills/red_10.jpg",
+          "label": "Rage",
+          "origin": "Item.bdfYHJstcltQC7SZ",
+          "tint": null,
+          "transfer": true
+        }
+      ],
+      "folder": null,
+      "sort": 0,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.C2lYHOGH2UpEifk7"
+        },
+        "exportSource": {
+          "world": "kobold-cauldron",
+          "system": "dnd5e",
+          "coreVersion": "0.7.7",
+          "systemVersion": "1.1.1"
+        }
+      }
+    },
+    {
+      "_id": "ZwDRBMHr94isGTVw",
+      "name": "Unarmored Defense (Barbarian)",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/blue_35.jpg",
+      "data": {
+        "description": {
+          "value": "<p>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 48",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": "",
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Barbarian 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {}
+    },
+    {
+      "_id": "sAyZrRtbJOtJpArF",
+      "name": "Battleaxe",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/items/weapons/battleaxe.png",
+      "data": {
+        "description": {
+          "value": "<p>A stout crescent blade mounted on a thick shaft wrapped in a sturdy grip. This axe is large enough to be wielded with two hands and is adorned with spikes upon the back-side of the blade and the top of the shaft.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 149",
+        "quantity": 1,
+        "weight": 4,
+        "price": "10",
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 5,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "mwak",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "1d8 + @mod",
+              "slashing"
+            ]
+          ],
+          "versatile": "1d10 + @mod"
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "martialM",
+        "properties": {
+          "ver": true
+        },
+        "proficient": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.I0WocDSuNpGJayPb"
+        }
+      }
+    },
+    {
+      "_id": "bofQFh6JjZFVEGew",
+      "name": "Half-Orc",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/affliction_22.jpg",
+      "data": {
+        "description": {
+          "value": "<p><em>Your half-orc character has certain traits deriving from your orc ancestry. </em></p>\n<p><em><strong>Ability Score Increase.</strong></em> Your Strength score increases by 2, and your Constitution score increases by 1.</p>\n<p><em><strong>Age.</strong></em> Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.</p>\n<p><em><strong>Alignment.</strong></em> Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.</p>\n<p><em><strong>Size.</strong></em> Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.</p>\n<p><em><strong>Speed.</strong></em> Your base walking speed is 30 feet.</p>\n<p><em><strong>Darkvision.</strong></em> Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>\n<p><em><strong>Menacing.</strong></em> You gain proficiency in the Intimidation skill.</p>\n<p><em><strong>Relentless Endurance.</strong></em> @Compendium[dnd5e.races.97c8i9Z28thvZuA8]{Relentless Endurance} When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.</p>\n<p><em><strong>Savage Attacks.</strong></em> @Compendium[dnd5e.races.0kUsT4sMUOr5FcoX]{Savage Attacks} When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.</p>\n<p><em><strong>Languages.</strong></em> You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 41",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.races.n5L000DkNBU6h2oJ"
+        }
+      }
+    },
+    {
+      "_id": "GPeBpUejCSyvCvSc",
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/items/weapons/dagger.jpg",
+      "data": {
+        "description": {
+          "value": "<p>A short metal blade mounted to a small hilt and crossguard. The dagger makes an effective side armament for hardened warriors or a hidden blade for assassins and thieves.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 149",
+        "quantity": 1,
+        "weight": 1,
+        "price": 2,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 0,
+          "units": ""
+        },
+        "target": {
+          "value": 0,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 20,
+          "long": 60,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "mwak",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "1d4 + @mod",
+              "piercing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "simpleM",
+        "properties": {
+          "fin": true,
+          "lgt": true,
+          "thr": true,
+          "amm": false,
+          "hvy": false,
+          "fir": false,
+          "foc": false,
+          "lod": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "spc": false,
+          "two": false,
+          "ver": false
+        },
+        "proficient": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000000,
+      "permission": {
+        "default": 0,
+        "sNbA1PBk8V6aScaa": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.0E565kQUBmndJ1a2"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "_id": "77cz60Vj66Exibju",
+      "changes": [
+        {
+          "key": "data.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+2"
+        },
+        {
+          "key": "data.traits.dr.value",
+          "mode": 2,
+          "value": "slashing"
+        },
+        {
+          "key": "data.traits.dr.value",
+          "mode": 2,
+          "value": "piercing"
+        },
+        {
+          "key": "data.traits.dr.value",
+          "mode": 2,
+          "value": "bludgeoning"
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": 0,
+        "rounds": 10
+      },
+      "icon": "systems/dnd5e/icons/skills/red_10.jpg",
+      "label": "Rage",
+      "origin": "Actor.ihU7vewuOewJN9zK.Item.Rx2RA373xr1QJ55b",
+      "tint": null,
+      "transfer": false,
+      "flags": {}
+    }
+  ],
+  "sort": 0,
+  "flags": {
+    "exportSource": {
+      "world": "new-world",
+      "system": "dnd5e",
+      "coreVersion": "0.8.8",
+      "systemVersion": "1.4.1"
+    }
+  }
+}
