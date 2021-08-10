@@ -1,3 +1,3 @@
 node_modules
-./app/data/upload
-./app/data/pcs
+data/upload/*.json
+data/pcs/*.json
