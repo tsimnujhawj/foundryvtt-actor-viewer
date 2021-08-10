@@ -24,7 +24,7 @@ The goal of this project is to make printing FoundryVTT characters possible.
 
 1. cd to the project folder and run:
     ```sh
-    node bin/prod || node bin/dev
+    node server.js
     ```
     
 ## Demo

@@ -6,7 +6,7 @@ const skills = [
   { code: 'acr', name: "Acrobatics", attr: "dex"},
   { code: 'ani', name: "Animal Handling", attr: "wis"},
   { code: 'arc', name: "Arcana", attr: "int"},
-  { code: 'ath', name: "Athletics", attr: "ttr"},
+  { code: 'ath', name: "Athletics", attr: "str"},
   { code: 'dec', name: "Deception", attr: "cha"},
   { code: 'his', name: "History", attr: "int"},
   { code: 'ins', name: "Insight", attr: "wis"},
@@ -143,7 +143,11 @@ module.exports = function(app) {
               ),
               weaponCount: getCount(getWeapons(character.items)),
               classCount: getCount(getClasses(character.items)),
-              featureCount: getCount(getFeatures(character.items))
+              featureCount: getCount(getFeatures(character.items)),
+              trait: stripHtml(character.data.details.trait),
+              ideal: stripHtml(character.data.details.ideal),
+              bond: stripHtml(character.data.details.bond),
+              flaw: stripHtml(character.data.details.flaw)
             }
             res.render('characterStandard', {
               title: character.name,

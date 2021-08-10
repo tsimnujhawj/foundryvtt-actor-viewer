@@ -88,11 +88,26 @@ html
               div(class='skills list-section box')
                 ul
                   for skill in skills
+                    - let mod = 0
+                    - abilityScoreModifiers.filter(obj=>{
+                    - if (obj.score === character.data.abilities[skill.attr].value) {
+                    -    if (character.data.skills[skill.code].value === 1) {
+                    -       mod = parseFloat(obj.mod)+proficiencyBonus[characterObj.totalLevel].bonus
+                    -         if (mod >= 0) {
+                    -             mod = `+${mod}`
+                    -         } else if (mod < 0) {
+                    -             mod = `-${mod}`
+                    -         }
+                    -    } else {
+                    -       mod = obj.mod
+                    -    }
+                    -  }
+                    - })
                     li
                       label(for="#{skill.name}") #{skill.name}
-                      span(class="skill") #{skill["attr"]}
-                      input(name="#{skill.name}" type="text" value=character.data.skills[skill.code].total)
-                      if character.data.skills[skill.code].prof >= 1
+                      span(class="skill") #{skill.attr.charAt(0).toUpperCase() + skill.attr.slice(1)}
+                      input(name="#{skill.name}" type="text" value=mod)
+                      if character.data.skills[skill.code].value >= 1
                         input(name="#{skill.name}-prof" type="checkbox" checked)
                       else
                         input(name="#{skill.name}-prof" type="checkbox")
@@ -197,19 +212,19 @@ html
           section(class='flavor')
             div(class='personality')
               label(for="personality") Personality
-              textarea(class='textarea-mod' name="personality") #{character.data.details.trait}
+              textarea(class='textarea-mod' name="personality") #{characterObj.trait}
               
             div(class='ideals')
               label(for="ideals") Ideals
-              textarea(class='textarea-mod' name="ideals") #{character.data.details.ideal}
+              textarea(class='textarea-mod' name="ideals") #{characterObj.ideal}
               
             div(class='bonds')
               label(for="bonds") Bonds
-              textarea(class='textarea-mod' name="bonds") #{character.data.details.bond}
+              textarea(class='textarea-mod' name="bonds") #{characterObj.bond}
               
             div(class='flaws')
               label(for="flaws") Flaws
-              textarea(class='textarea-mod' name="flaws") #{character.data.details.flaw}
+              textarea(class='textarea-mod' name="flaws") #{characterObj.flaw}
               
           section(class='features')
             div
