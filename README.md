@@ -26,13 +26,6 @@ The goal of this project is to make printing FoundryVTT characters possible.
     ```sh
     node server.js
     ```
-    
-## Demo
-
-A version of the web application can be found at [http://fvttactorviewer.pixelpunch.io/](http://fvttactorviewer.pixelpunch.io/)
-
-## Credits
-
 
 ## License
 
