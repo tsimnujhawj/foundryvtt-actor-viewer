@@ -27,6 +27,9 @@ The goal of this project is to make printing FoundryVTT characters possible.
     node server.js
     ```
 
+## Demo
+[Video Demo @ YouTube](https://youtu.be/4U2zYQkeOhE)
+
 ## License
 
 [MIT](LICENSE.txt)
